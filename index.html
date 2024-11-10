@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures Memory Visualizer</title>
+    <link rel="stylesheet" href="styles.css">  <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Data Structures Memory Visualizer</h1>
+            <p>Visual representation of data structures in memory</p>
+        </div>
+
+        <div class="controls">
+            <select id="dataStructure">
+                <option value="array">Array</option>
+                <option value="linkedList">Linked List</option>
+                <option value="pointers">Simple Pointers</option>
+            </select>
+            <input type="text" id="input" placeholder="Enter value">
+            <button onclick="addElement()">Add Element</button>
+            <button onclick="removeElement()">Remove Last</button>
+            <button onclick="clearStructure()">Clear All</button>
+        </div>
+        <div id="errorMessage" class="error-message"></div>
+
+        <div class="visualization">
+            <div class="memory-container">
+                <div class="memory-region stack">
+                    <div class="memory-region-title">Stack Memory</div>
+                    <div id="stackRegion"></div>
+                </div>
+                <div class="memory-region heap">
+                    <div class="memory-region-title">Heap Memory</div>
+                    <div id="heapRegion"></div>
+                </div>
+            </div>
+            <div id="arrows"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to your JS file -->
+</body>
+</html>
